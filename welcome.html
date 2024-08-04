@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="username"></span>!</h1>
+        <p>Your registration was successful. We are thrilled to have you with us.</p>
+        <a href="index.html" class="btn">Go to Home</a>
+    </div>
+    <script>
+        // Get the username from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        document.getElementById('username').textContent = username || "Guest";
+    </script>
+</body>
+</html>

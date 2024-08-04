@@ -1,0 +1,169 @@
+/* Global Variables */
+:root {
+    --primary-color: #ff6f61; /* Vibrant Coral */
+    --secondary-color: #4a90e2; /* Bright Blue */
+    --accent-color: #00c8a8; /* Fresh Teal */
+    --background-gradient: linear-gradient(135deg, #f5f7fa, #e3eaf1);
+    --background-image: url('https://www.transparenttextures.com/patterns/white-diamonds.png');
+    --text-color: #ecff5a;
+    --input-border: #ddd;
+    --input-focus-border: var(--secondary-color);
+    --button-background: var(--primary-color);
+    --button-hover-background: #e55b5b; /* Darker Coral */
+    --button-active-background: #d44d4d; /* Even Darker Coral */
+    --glow-color: rgba(255, 105, 135, 0.6); /* Glowing Coral */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-gradient), var(--background-image);
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    overflow: hidden; /* Prevents scrollbars */
+    background-image: url(1.jpg);
+}
+
+.container {
+    background: #196988;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 30px var(--shadow-light);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ff7d7d;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 10px var(--input-focus-border);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--button-background);
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px var(--shadow-dark), 0 0 8px var(--glow-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow-dark), 0 0 12px var(--glow-color);
+}
+
+button:active {
+    background-color: var(--button-active-background);
+    transform: translateY(1px);
+    box-shadow: 0 6px 12px var(--shadow-dark), 0 0 10px var(--glow-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+#message {
+    color: #dc3545;
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size: 0.9em;
+    color: var(--text-color);
+    text-align: center;
+    background: none;
+    border-top: 1px solid var(--input-border);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 15px 25px var(--shadow-light);
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        background-color: transparent;
+    }
+}
